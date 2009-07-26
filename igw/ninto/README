@@ -1,6 +1,12 @@
-../backup-data  : contient les fichiers originaux
 vectorial       : version vectorielle du code originel
 Venus           : traitement des données de Vénus, itératif et vectoriel
 viscosity       : version à composante visqueuse
 viscovectorial  : version vectorielle à composante visqueuse
 
+Bestview2.mat   : librairie graphique
+modele1         : data
+
+TODO
+
+- adimensionnement et le code qui en découle
+- version souple basée sur la relation de dispersion
