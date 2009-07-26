@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[fr, maths, tensoriel, matlab, natbib]{jd}
+\usepackage{chngpage}
+
+\geometry{hmargin=1.5cm, vmargin=1.5cm}
+
+% small MATLAB listings
+%\makeatletter
+%\lst@AddToHook{TextStyle}{\let\lst@basicstyle\ttfamily\footnotesize\fontfamily{pcr}\selectfont}
+%\makeatother
+\lstset{basicstyle=\tiny\ttfamily}
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\def\blurb{%
+  Université Paris 6 Pierre et Marie Curie \\
+  M1 Océan, atmosphère, climat et télédétection \\[1em]}
+\def\stage{Stage de M1}
+\author{%
+Jean-Denis Vauguet\\
+\email{jd@typhon.org}}
+\title{Caractérisation de l'effet lié aux vents et à la viscosité sur la propagation des ondes de gravité dans l'atmosphère}
+\def\direction{%
+{\Large Sous la direction de}\\[0.3em]
+{\LARGE Giovanni \sc{Occhipinti}}\\[0.3em]
+{\Large Équipe Études spatiales et planétologie -- IPGP}}
+\date{2009}
+
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+  \vskip 1cm
+  \begin{center}
+    \normalfont \blurb
+    \Large \stage
+  \end{center}
+  \ifhmode\par\fi
+  \vskip 1cm
+  \hbox to \hsize{\hfill
+    \vrule height 2pt width.5\hsize
+    \hfill}%
+  \vskip 1cm
+  \begin{center}
+    \huge \strut \@title \par
+  \end{center}
+  %\par
+  \vskip 0.8cm
+  \hbox to \hsize{\hfill
+    \vrule height 2pt width.5\hsize
+    \hfill}%
+  \vfil
+  \begin{center}
+  \normalfont\LARGE\@author\par
+  \end{center}
+  \vfil
+  \begin{center}
+  \direction
+  \end{center}
+  \par
+  \null
+  \cleardoublepage
+  }
+\makeatother
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\include{presentation}
+
+\include{vents}
+
+\include{visco-elastique}
+
+\include{conclusion}
+
+\bibliographystyle{agu}
+\bibliography{jd.bib}
+
+\include{annexes}
+
+\end{document}
+

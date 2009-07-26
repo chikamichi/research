@@ -1,0 +1,6 @@
+../backup-data  : contient les fichiers originaux
+vectorial       : version vectorielle du code originel
+Venus           : traitement des données de Vénus, itératif et vectoriel
+viscosity       : version à composante visqueuse
+viscovectorial  : version vectorielle à composante visqueuse
+
