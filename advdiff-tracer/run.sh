@@ -46,7 +46,7 @@ echo 'running...'
 # plotit
 echo 'matlab processing...'
 #/usr/bin/nohup nice -10 en préfixe de la commande suivante, éventuellement
-matlab -nodesktop -nosplash -r plotit
+matlab -softwareopengl -nodesktop -nosplash -r plotit
 echo 'matlab processing done.'
 
 # 3. merge them into a good movie?
@@ -74,11 +74,11 @@ for param in $*; do
     ##done
     #echo 'done'
 
-    #echo 'creating movies...'
-    #mencoder mf://output/3D/*.tif -mf w=478:h=380:fps=24:type=tif -ovc copy -o animation-3D.mpg
-    mencoder mf://output/map/*.png -mf w=478:h=380:fps=24:type=png -ovc copy -o animation-map.avi
-    #echo
-    #echo 'movies created.'
+    echo 'creating movies...'
+    mencoder mf://output/3D/*.png  -mf w=478:h=380:fps=24:type=png -ovc copy -o animation-3D.avi
+    #mencoder mf://output/map/*.png -mf w=478:h=380:fps=24:type=png -ovc copy -o animation-map.avi
+    echo
+    echo 'movies created.'
   fi
 done
 
